@@ -1,18 +1,22 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 28
-    buildToolsVersion "28.0.3"
+    compileSdkVersion 35  // Update this line (probably was 28 or 29)
+    buildToolsVersion "35.0.0"  // Update this line too
 
     defaultConfig {
-        minSdkVersion 21
-        targetSdkVersion 28
+        minSdkVersion 16
+        targetSdkVersion 35  // Update this as well
         versionCode 1
         versionName "1.0"
+    }
+    
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 
 dependencies {
     implementation 'com.facebook.react:react-native:+'
 }
-

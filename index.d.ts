@@ -16,6 +16,7 @@ export interface BroadcastOptions {
 }
 
 export function setCompanyId(companyId: number): void;
+export function getMaxAdvertisingDataLength(): Promise<number>;
 export function broadcast(uid: String, manufData: number[], options?: BroadcastOptions): Promise<string>;
 export function stopBroadcast(): Promise<string>;
 export function scan(manufDataFilter: number[], options?: ScanOptions): Promise<string>;
